@@ -149,16 +149,16 @@
     ]
   ],
   "player_pos": [
-    1,
+    2,
     1
   ],
   "exit_pos": [
     9,
     9
   ],
-  "move_count": 0,
+  "move_count": 1,
   "last_movers": {
-    "chilli-garlic-momo": "2026-06-09T17:39:18.768216+00:00"
+    "chilli-garlic-momo": "2026-06-09T18:32:22.660034+00:00"
   },
   "completed_by": null,
   "hall_of_fame": []
