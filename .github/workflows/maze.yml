@@ -4,8 +4,6 @@ on:
   issues:
     types: [opened]
 
-# Only one move processes at a time — prevents race conditions if two
-# issues open within milliseconds of each other
 concurrency:
   group: maze-move
   cancel-in-progress: false
@@ -15,15 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write      # commit README + game_state.json
-      issues: write        # post comments + close issues
+      contents: write
+      issues: write
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          # Use a PAT so the commit triggers other workflows if needed.
-          # Falls back to GITHUB_TOKEN if PAT not set — fine for most cases.
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
@@ -45,6 +41,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md game_state.json
-          # Only commit if there are actual changes
           git diff --cached --quiet || git commit -m "🐾 move by @${{ github.event.issue.user.login }} [skip ci]"
           git push
