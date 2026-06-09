@@ -150,17 +150,18 @@
   ],
   "player_pos": [
     1,
-    2
+    3
   ],
   "exit_pos": [
     9,
     9
   ],
-  "move_count": 1,
+  "move_count": 2,
   "last_movers": {
-    "chilli-garlic-momo": "2026-06-09T21:14:47.174175+00:00"
+    "chilli-garlic-momo": "2026-06-09T21:14:47.174175+00:00",
+    "chitrakshbotwala": "2026-06-09T21:16:16.200442+00:00"
   },
-  "last_mover": "chilli-garlic-momo",
+  "last_mover": "chitrakshbotwala",
   "completed_by": null,
   "hall_of_fame": []
 }
