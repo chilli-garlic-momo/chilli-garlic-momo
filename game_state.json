@@ -160,6 +160,7 @@
   "last_movers": {
     "chilli-garlic-momo": "2026-06-09T19:06:02.328336+00:00"
   },
+  "last_mover": null,
   "completed_by": null,
   "hall_of_fame": []
 }
