@@ -7,7 +7,7 @@
 > _a community maze game. help the cat steal the loot._
 
 **maze #1 — Mochi**
-1 move so far
+2 moves so far
 
 </div>
 
@@ -44,7 +44,7 @@
 </tr>
 <tr>
 <td><img src="assets/tiles/wall_left.png" width="48" height="48"></td>
-<td><img src="assets/cats/white_run.gif" width="48" height="48"></td>
+<td><img src="assets/tiles/floor.png" width="48" height="48"></td>
 <td><img src="assets/tiles/wall_top.png" width="48" height="48"></td>
 <td><img src="assets/tiles/floor.png" width="48" height="48"></td>
 <td><img src="assets/tiles/wall_top.png" width="48" height="48"></td>
@@ -57,7 +57,7 @@
 </tr>
 <tr>
 <td><img src="assets/tiles/wall_left.png" width="48" height="48"></td>
-<td><img src="assets/tiles/floor.png" width="48" height="48"></td>
+<td><img src="assets/cats/white_run.gif" width="48" height="48"></td>
 <td><img src="assets/tiles/wall_top.png" width="48" height="48"></td>
 <td><img src="assets/tiles/floor_textured_a.png" width="48" height="48"></td>
 <td><img src="assets/tiles/wall_top.png" width="48" height="48"></td>
