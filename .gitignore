@@ -1,0 +1,16 @@
+# Raw downloaded asset files — not needed in the repo
+raw_assets/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Windows zone identifier files (from downloads)
+*.Zone.Identifier
+*:Zone.Identifier
