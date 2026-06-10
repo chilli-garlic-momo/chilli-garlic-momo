@@ -239,9 +239,14 @@ def tile_name_for_cell(grid, r, c, exit_pos):
 
 def render_board(state):
     """Compose the maze + animated cat into assets/board.gif."""
-    px    = TILE_PX
+    px       = TILE_PX
+    board_px = MAZE_SIZE * px
+
+    # Load and resize all tiles once
     tiles = {
-        name: Image.open(ASSETS_DIR / "tiles" / f"{name}.png").convert("RGBA")
+        name: Image.open(ASSETS_DIR / "tiles" / f"{name}.png")
+               .convert("RGBA")
+               .resize((px, px), Image.NEAREST)
         for name in TILE_NAMES
     }
 
@@ -249,26 +254,30 @@ def render_board(state):
     pr, pc   = state["player_pos"]
     exit_pos = state["exit_pos"]
 
-    # Static base board
-    base = Image.new("RGBA", (MAZE_SIZE * px, MAZE_SIZE * px))
+    # Build static base board once — player cell gets floor underneath
+    base = Image.new("RGBA", (board_px, board_px))
     for r in range(MAZE_SIZE):
         for c in range(MAZE_SIZE):
-            name = tile_name_for_cell(grid, r, c, exit_pos)
-            tile = tiles[name]
-            if tile.size != (px, px):
-                tile = tile.resize((px, px), Image.NEAREST)
-            base.paste(tile, (c * px, r * px))
+            name = "floor" if (r == pr and c == pc) else tile_name_for_cell(grid, r, c, exit_pos)
+            base.paste(tiles[name], (c * px, r * px))
 
-    # Animated cat — IDLE on the board (it sits and waits between moves)
-    cat_gif = Image.open(ASSETS_DIR / "cats" / f"{state['cat_colour']}_idle.gif")
+    # Store base as raw bytes — cheap to restore per frame
+    base_bytes = base.tobytes()
 
-    frames, durations = [], []
+    # Load cat idle frames once
+    cat_gif    = Image.open(ASSETS_DIR / "cats" / f"{state['cat_colour']}_idle.gif")
+    cat_frames = []
+    durations  = []
     for frame in ImageSequence.Iterator(cat_gif):
-        cat_frame = frame.convert("RGBA").resize((px, px), Image.NEAREST)
-        composed  = base.copy()
-        composed.alpha_composite(cat_frame, (pc * px, pr * px))
-        frames.append(composed.convert("P", palette=Image.ADAPTIVE))
+        cat_frames.append(frame.convert("RGBA").resize((px, px), Image.NEAREST))
         durations.append(frame.info.get("duration", 150))
+
+    # Compose each frame: restore base cheaply, drop cat on top, quantize
+    frames = []
+    for cat_frame in cat_frames:
+        composed = Image.frombytes("RGBA", (board_px, board_px), base_bytes)
+        composed.alpha_composite(cat_frame, (pc * px, pr * px))
+        frames.append(composed.quantize(colors=256, method=Image.Quantize.FASTOCTREE))
 
     frames[0].save(
         BOARD_FILE,
@@ -276,6 +285,7 @@ def render_board(state):
         append_images=frames[1:],
         duration=durations,
         loop=0,
+        optimize=False,
     )
     print(f"Board rendered → {BOARD_FILE.relative_to(REPO_ROOT)}")
 
@@ -551,8 +561,8 @@ def main():
 
     direction = parse_direction(title)
     if direction is None:
-        post_comment(issue_number, comment_invalid(author, title))
-        close_issue(issue_number)
+        # not a move issue — ignore silently, don't touch it
+        print(f"Not a move issue, ignoring: {title!r}")
         return
 
     state = load_state()
@@ -573,7 +583,7 @@ def main():
     if reason == "wall":
         state.setdefault("last_movers", {})[author] = now_iso()
         save_state(state)
-        write_outputs(state)   # still re-render so a fresh maze shows after bootstrap
+        # board doesn't change on a wall hit — skip re-render
         post_comment(issue_number, comment_blocked(direction, author))
         close_issue(issue_number)
         print(f"Blocked: {direction}")
