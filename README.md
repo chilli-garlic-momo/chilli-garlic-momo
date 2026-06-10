@@ -4,9 +4,9 @@
 
 _a community maze game — help **Mochi** find the exit_
 
-**total moves made by Mochi in maze #1: 8** · last move by [@Ivez-pop](https://github.com/Ivez-pop)
+**total moves made by Mochi in maze #1: 9** · last move by [@chitrakshbotwala](https://github.com/chitrakshbotwala)
 
-<img src="https://raw.githubusercontent.com/chilli-garlic-momo/chilli-garlic-momo/main/assets/board.gif?v=1-8" width="396" alt="the maze" />
+<img src="https://raw.githubusercontent.com/chilli-garlic-momo/chilli-garlic-momo/main/assets/board.gif?v=1-9" width="396" alt="the maze" />
 
 <a href="https://github.com/chilli-garlic-momo/chilli-garlic-momo/issues/new?title=Move%3A+UP">⬆️</a>&nbsp;&nbsp;<a href="https://github.com/chilli-garlic-momo/chilli-garlic-momo/issues/new?title=Move%3A+DOWN">⬇️</a>&nbsp;&nbsp;<a href="https://github.com/chilli-garlic-momo/chilli-garlic-momo/issues/new?title=Move%3A+LEFT">⬅️</a>&nbsp;&nbsp;<a href="https://github.com/chilli-garlic-momo/chilli-garlic-momo/issues/new?title=Move%3A+RIGHT">➡️</a>
 
