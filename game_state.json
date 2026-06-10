@@ -149,14 +149,14 @@
     ]
   ],
   "player_pos": [
-    5,
+    6,
     7
   ],
   "exit_pos": [
     9,
     9
   ],
-  "move_count": 12,
+  "move_count": 13,
   "last_movers": {
     "chilli-garlic-momo": "2026-06-10T11:55:16.601555+00:00",
     "chitrakshbotwala": "2026-06-10T11:45:52.748428+00:00",
@@ -165,7 +165,7 @@
     "aalolika2006": "2026-06-10T04:41:31.094276+00:00",
     "Shalineeeweeee": "2026-06-10T06:24:15.444507+00:00",
     "Ivez-pop": "2026-06-10T07:25:43.925056+00:00",
-    "rootmnt": "2026-06-10T12:36:52.650690+00:00"
+    "rootmnt": "2026-06-10T12:57:11.909491+00:00"
   },
   "last_mover": "rootmnt",
   "completed_by": null,
