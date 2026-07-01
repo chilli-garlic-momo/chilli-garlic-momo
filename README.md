@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <td valign="top" width="50%">
+    <td valign="top" width="65%">
 
 ### 👋 Jiya Jaiswal (chilli-garlic-momo)
 
@@ -8,8 +8,7 @@ _CS Undergrad @ KIIT '28 · Distributed Systems & Backend Engineer_
 
 > "Building distributed systems that don't lose data (mostly), and the occasional games only I would play."
 
-🔍 _Looking for internships_  
-📎 [linkedin.com/in/jiya-jaiswal](https://www.linkedin.com/in/jiya-jaiswal/)
+[Linkedin](https://www.linkedin.com/in/jiya-jaiswal/)
 
 <p>
   <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go" />
@@ -34,7 +33,13 @@ _CS Undergrad @ KIIT '28 · Distributed Systems & Backend Engineer_
 </p>
 
 <p>
-  <img src="https://github-readme-stats.vercel.app/api?username=chilli-garlic-momo&show_icons=true&theme=default&hide_rank=true" width="350" alt="GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=chilli-garlic-momo&show_icons=true&count_private=true&hide_rank=true&theme=swift" width="350" alt="GitHub stats" />
+</p>
+<p>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chilli-garlic-momo&layout=compact&theme=swift" width="350" alt="Top languages" />
+</p>
+<p>
+  <img src="https://streak-stats.demolab.com/?user=chilli-garlic-momo&theme=swift" width="350" alt="GitHub streak" />
 </p>
 
   </td>
@@ -54,13 +59,17 @@ _a community maze game — help **Nori** find the exit_
 
 _click a direction · a pre-filled issue opens · hit submit · one move per person every 15 min_
 
+### hall of fame
+
+| # | cat | adopted by | moves |
+|---|-----|------------|-------|
+| 1 | Mochi | [@rootmnt](https://github.com/rootmnt) | 18 |
+
 </div>
 
   </td>
   </tr>
 </table>
-
----
 
 <details>
 <summary><b>how it works</b></summary>
@@ -72,13 +81,6 @@ _click a direction · a pre-filled issue opens · hit submit · one move per per
 - one move per person every 15 minutes — others can still move
 
 </details>
-
-## hall of fame
-
-| # | cat | adopted by | moves |
-|---|-----|------------|-------|
-| 1 | Mochi | [@rootmnt](https://github.com/rootmnt) | 18 |
-
 
 <div align="center">
 
