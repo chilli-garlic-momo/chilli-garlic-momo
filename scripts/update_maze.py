@@ -455,9 +455,21 @@ def handle_win(state, author):
 
 
 def write_outputs(state):
-    """Render board GIF + README together — always called as a pair."""
+    """Render board GIF, then splice the game section into README.md."""
     render_board(state)
-    README_FILE.write_text(build_readme(state))
+
+    start, end = "<!-- CAT_HEIST:START -->", "<!-- CAT_HEIST:END -->"
+    game_block = f"{start}\n{build_readme(state)}\n{end}"
+
+    existing = README_FILE.read_text() if README_FILE.exists() else ""
+    if start in existing and end in existing:
+        pre, _, rest = existing.partition(start)
+        _, _, post = rest.partition(end)
+        new_readme = pre + game_block + post
+    else:
+        new_readme = existing.rstrip() + "\n\n" + game_block + "\n"
+
+    README_FILE.write_text(new_readme)
 
 
 # ---------------------------------------------------------------------------
