@@ -140,7 +140,7 @@
 </div>
 
 ## 🐾 cat heist
-
+<!-- CAT_HEIST:START -->
 <table>
   <tr>
     <td valign="top" width="60%" align="center">
@@ -188,3 +188,4 @@ _built with github actions · [source](scripts/update_maze.py)_
   </td>
   </tr>
 </table>
+<!-- CAT_HEIST:START -->
