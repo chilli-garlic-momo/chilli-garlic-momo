@@ -52,7 +52,7 @@
       <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker" />
     </td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td width="50%" valign="top" style="border: 1px solid #30363d; padding: 12px;">
       <b><a href="https://github.com/chilli-garlic-momo/Devils-Advocate-AI">Devil's Advocate AI</a></b><br>
       an adversarial multi-agent debate system (Planner, Research, Bull, Bear, Judge, Memory agents) that argues both sides of a claim and tracks reasoning in a persistent argument graph. FastAPI REST backend with session recovery, React/TypeScript frontend.<br>
@@ -66,7 +66,7 @@
       <img src="https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white" alt="Rust" />
       <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go" />
     </td>
-  </tr>
+  </tr> -->
   <tr>
     <td width="50%" valign="top" style="border: 1px solid #30363d; padding: 12px;">
       <b><a href="https://github.com/chilli-garlic-momo/NicoteX">NicoteX</a></b><br>
